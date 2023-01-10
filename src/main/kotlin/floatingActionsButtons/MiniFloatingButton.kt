@@ -4,8 +4,14 @@ import buttonBuilders.ContainerBuilder
 import buttonBuilders.IconBuilder
 
 class MiniFloatingButton(
-    override var icon: IconBuilder =  IconBuilder(4,2321),
-    override var container: ContainerBuilder = ContainerBuilder(21,25,13)
-) : FloatingButton(icon, container) {
+    private val miniIcon : IconBuilder,
+    private val miniContainer : ContainerBuilder
+) : FloatingButton() {
+    override val icon: IconBuilder
+        get() =miniIcon
+
+    override val container: ContainerBuilder
+        get() = miniContainer
+
 
 }
